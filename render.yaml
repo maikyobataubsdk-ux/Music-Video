@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: telegram-player-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python player.py
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
